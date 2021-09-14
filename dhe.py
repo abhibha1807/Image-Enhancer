@@ -104,12 +104,12 @@ def dhe(img, alpha=0.5):
 
 def main():
     # img_name = sys.argv[1]
-    filename = '/Users/abhibhagupta/Desktop/ucsd/lbt/data/val/NORMAL/'
+    filename = '/abhibha-volume/PCDARTS-cifar10/data/val/NORMAL/'
     
     onlyfiles = [f for f in listdir(filename) if isfile(join(filename, f))]
     print(onlyfiles)
     for i in onlyfiles:
-        towrite = '/Users/abhibhagupta/Desktop/ucsd/Image-Contrast-Enhancement-master/cleaned_val/NORMAL/'
+        towrite = './cleaned_val/NORMAL/'
         img_name = filename + i
         img = imageio.imread(img_name)
         img_ = cv2.imread(img_name)
@@ -123,6 +123,7 @@ def main():
         plt.imshow(result)
         plt.show()
         cv2.imwrite(towrite+i, result)
+        break
        
 
 if __name__ == '__main__':
