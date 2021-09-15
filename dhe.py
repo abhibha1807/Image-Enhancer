@@ -246,6 +246,7 @@ def main():
     #     #plt.show()
     #     cv2.imwrite(towrite+i, result)
     
+    
     for i in onlyfiles8:
         towrite = './cleaned_test_copy/PNEUMONIA/'
         img_name = filename8 + i
