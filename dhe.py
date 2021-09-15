@@ -143,12 +143,12 @@ def main():
             l=img.shape[0]
             w=img.shape[1]
             
-    #         img = img_.reshape(l,w,3)
-    #         print(img.shape)
-    #         result = dhe(img)
-    #         #plt.imshow(result)
-    #         #plt.show()
-    #         cv2.imwrite(towrite+i, result)
+            img = img_.reshape(l,w,3)
+            print(img.shape)
+            result = dhe(img)
+            #plt.imshow(result)
+            #plt.show()
+            cv2.imwrite(towrite+i, result)
     
     # for i in onlyfiles2:
     #     towrite = './cleaned_train/PNEUMONIA/'
