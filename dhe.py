@@ -152,11 +152,31 @@ def main():
     #         print(c)
     # print('cleaned train NORMAL finished')
     
+    # c=0
+    # for i in onlyfiles2:
+    #     c=c+1
+    #     towrite = './cleaned_train/PNEUMONIA/'
+    #     img_name = filename2 + i
+    #     img = imageio.imread(img_name)
+    #     img_ = cv2.imread(img_name)
+    #     #plt.imshow(img_)
+    #     l=img.shape[0]
+    #     w=img.shape[1]
+        
+    #     img = img_.reshape(l,w,3)
+    #     print(img.shape)
+    #     result = dhe(img)
+    #     #plt.imshow(result)
+    #     #plt.show()
+    #     cv2.imwrite(towrite+i, result)
+    #     print(c)
+    # print('cleaned train PNEUMONIA finished')
+
     c=0
-    for i in onlyfiles2:
+    for i in onlyfiles3:
         c=c+1
-        towrite = './cleaned_train/PNEUMONIA/'
-        img_name = filename2 + i
+        towrite = './cleaned_test/NORMAL/'
+        img_name = filename3 + i
         img = imageio.imread(img_name)
         img_ = cv2.imread(img_name)
         #plt.imshow(img_)
@@ -170,23 +190,8 @@ def main():
         #plt.show()
         cv2.imwrite(towrite+i, result)
         print(c)
-    print('cleaned train PNEUMONIA finished')
+    print('cleaned test NORMAL finished')
 
-    # for i in onlyfiles3:
-    #     towrite = './cleaned_test/NORMAL/'
-    #     img_name = filename3 + i
-    #     img = imageio.imread(img_name)
-    #     img_ = cv2.imread(img_name)
-    #     #plt.imshow(img_)
-    #     l=img.shape[0]
-    #     w=img.shape[1]
-        
-    #     img = img_.reshape(l,w,3)
-    #     print(img.shape)
-    #     result = dhe(img)
-    #     #plt.imshow(result)
-    #     #plt.show()
-    #     cv2.imwrite(towrite+i, result)
     
     # for i in onlyfiles4:
     #     towrite = './cleaned_test/PNEUMONIA/'
