@@ -3,7 +3,7 @@ kind: Job # Deployment will automatically restart when killed. Use Pod if not ne
 metadata:
   labels:
     k8s-app: research
-  name: abhibha-preprocess-images10
+  name: abhibha-preprocess-images9
   namespace: ecepxie
 spec:
   template:
@@ -20,11 +20,11 @@ spec:
         command: ["python","dhe.py"]
         resources:
           requests:
-            memory: "4Gi"
+            memory: "2Gi"
             cpu: "1"
             nvidia.com/gpu: 0
           limits:
-            memory: "4Gi"
+            memory: "2Gi"
             cpu: "1"
             nvidia.com/gpu: 0
         volumeMounts:
