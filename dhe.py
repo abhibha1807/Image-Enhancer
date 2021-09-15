@@ -288,11 +288,31 @@ def main():
     #     print(c)
     # print('cleaned test copy PNEUMONIA finished')
     
+    # c=0
+    # for i in onlyfiles9:
+    #     c=c=1
+    #     towrite = './cleaned_val_copy/NORMAL/'
+    #     img_name = filename9 + i
+    #     img = imageio.imread(img_name)
+    #     img_ = cv2.imread(img_name)
+    #     #plt.imshow(img_)
+    #     l=img.shape[0]
+    #     w=img.shape[1]
+        
+    #     img = img_.reshape(l,w,3)
+    #     print(img.shape)
+    #     result = dhe(img)
+    #     #plt.imshow(result)
+    #     #plt.show()
+    #     cv2.imwrite(towrite+i, result)
+    #     print(c)
+    # print('cleaned val copy NORMAL finished')
+    
     c=0
-    for i in onlyfiles9:
-        c=c=1
-        towrite = './cleaned_val_copy/NORMAL/'
-        img_name = filename9 + i
+    for i in onlyfiles10:
+        c=c+1
+        towrite = './cleaned_val_copy/PNEUMONIA/'
+        img_name = filename10 + i
         img = imageio.imread(img_name)
         img_ = cv2.imread(img_name)
         #plt.imshow(img_)
@@ -306,24 +326,7 @@ def main():
         #plt.show()
         cv2.imwrite(towrite+i, result)
         print(c)
-    print('cleaned val copy NORMAL finished')
-    
-    # for i in onlyfiles10:
-    #     towrite = './cleaned_val_copy/PNEUMONIA/'
-    #     img_name = filename10 + i
-    #     img = imageio.imread(img_name)
-    #     img_ = cv2.imread(img_name)
-    #     #plt.imshow(img_)
-    #     l=img.shape[0]
-    #     w=img.shape[1]
-        
-    #     img = img_.reshape(l,w,3)
-    #     print(img.shape)
-    #     result = dhe(img)
-    #     #plt.imshow(result)
-    #     #plt.show()
-    #     cv2.imwrite(towrite+i, result)
-    
+    print('cleaned val copy PNEUMONIA finished')
        
 
 if __name__ == '__main__':
