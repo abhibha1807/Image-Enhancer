@@ -104,8 +104,8 @@ def dhe(img, alpha=0.5):
 
 def main():
     # img_name = sys.argv[1]
-    filename1 = '/abhibha-volume/PCDARTS-cifar10/data/train/NORMAL/'
-    #filename2 = '/abhibha-volume/PCDARTS-cifar10/data/train/PNEUMONIA/'
+    #filename1 = '/abhibha-volume/PCDARTS-cifar10/data/train/NORMAL/'
+    filename2 = '/abhibha-volume/PCDARTS-cifar10/data/train/PNEUMONIA/'
     # filename3 = '/abhibha-volume/PCDARTS-cifar10/data/test/NORMAL/'
     # filename4 = '/abhibha-volume/PCDARTS-cifar10/data/test/PNEUMONIA/'
     
@@ -114,8 +114,8 @@ def main():
     # filename7 = '/abhibha-volume/PCDARTS-cifar10/data_copy/test/NORMAL/'
     # filename8 = '/abhibha-volume/PCDARTS-cifar10/data_copy/test/PNEUMONIA/'
     
-    onlyfiles1 = [f for f in listdir(filename1) if isfile(join(filename1, f))]
-    # onlyfiles2 = [f for f in listdir(filename2) if isfile(join(filename2, f))]
+    #onlyfiles1 = [f for f in listdir(filename1) if isfile(join(filename1, f))]
+    onlyfiles2 = [f for f in listdir(filename2) if isfile(join(filename2, f))]
     # onlyfiles3 = [f for f in listdir(filename3) if isfile(join(filename3, f))]
     # onlyfiles4 = [f for f in listdir(filename4) if isfile(join(filename4, f))]
 
@@ -125,40 +125,40 @@ def main():
     # onlyfiles8 = [f for f in listdir(filename8) if isfile(join(filename8, f))]
 
     #print(onlyfiles)
-    c=0
-    for i in onlyfiles1:
-        c=c+1
-        if c > 120:
-            towrite = './cleaned_train/NORMAL/'
-            img_name = filename1 + i
-            img = imageio.imread(img_name)
-            img_ = cv2.imread(img_name)
-            #plt.imshow(img_)
-            l=img.shape[0]
-            w=img.shape[1]
+    # c=0
+    # for i in onlyfiles1:
+    #     c=c+1
+    #     if c > 120:
+    #         towrite = './cleaned_train/NORMAL/'
+    #         img_name = filename1 + i
+    #         img = imageio.imread(img_name)
+    #         img_ = cv2.imread(img_name)
+    #         #plt.imshow(img_)
+    #         l=img.shape[0]
+    #         w=img.shape[1]
             
-            img = img_.reshape(l,w,3)
-            print(img.shape)
-            result = dhe(img)
-            #plt.imshow(result)
-            #plt.show()
-            cv2.imwrite(towrite+i, result)
+    #         img = img_.reshape(l,w,3)
+    #         print(img.shape)
+    #         result = dhe(img)
+    #         #plt.imshow(result)
+    #         #plt.show()
+    #         cv2.imwrite(towrite+i, result)
     
-    # for i in onlyfiles2:
-    #     towrite = './cleaned_train/PNEUMONIA/'
-    #     img_name = filename2 + i
-    #     img = imageio.imread(img_name)
-    #     img_ = cv2.imread(img_name)
-    #     #plt.imshow(img_)
-    #     l=img.shape[0]
-    #     w=img.shape[1]
+    for i in onlyfiles2:
+        towrite = './cleaned_train/PNEUMONIA/'
+        img_name = filename2 + i
+        img = imageio.imread(img_name)
+        img_ = cv2.imread(img_name)
+        #plt.imshow(img_)
+        l=img.shape[0]
+        w=img.shape[1]
         
-    #     img = img_.reshape(l,w,3)
-    #     print(img.shape)
-    #     result = dhe(img)
-    #     #plt.imshow(result)
-    #     #plt.show()
-    #     cv2.imwrite(towrite+i, result)
+        img = img_.reshape(l,w,3)
+        print(img.shape)
+        result = dhe(img)
+        #plt.imshow(result)
+        #plt.show()
+        cv2.imwrite(towrite+i, result)
 
     # for i in onlyfiles3:
     #     towrite = './cleaned_test/NORMAL/'
