@@ -114,7 +114,7 @@ def main():
     #filename7 = '/abhibha-volume/PCDARTS-cifar10/data_copy/test/NORMAL/'
     #filename8 = '/abhibha-volume/PCDARTS-cifar10/data_copy/test/PNEUMONIA/'
     
-    filename9 = '/abhibha-volume/PCDARTS-cifar10/data_copy/val/NORMAL/'
+    #ilename9 = '/abhibha-volume/PCDARTS-cifar10/data_copy/val/NORMAL/'
     filename10 = '/abhibha-volume/PCDARTS-cifar10/data_copy/val/PNEUMONIA/'
 
 
@@ -127,7 +127,7 @@ def main():
     #onlyfiles6 = [f for f in listdir(filename6) if isfile(join(filename6, f))]
     #onlyfiles7 = [f for f in listdir(filename7) if isfile(join(filename7, f))]
     #onlyfiles8 = [f for f in listdir(filename8) if isfile(join(filename8, f))]
-    onlyfiles9 = [f for f in listdir(filename9) if isfile(join(filename9, f))]
+    #onlyfiles9 = [f for f in listdir(filename9) if isfile(join(filename9, f))]
     onlyfiles10 = [f for f in listdir(filename10) if isfile(join(filename10, f))]
 
     #print(onlyfiles)
@@ -262,25 +262,9 @@ def main():
     #     #plt.show()
     #     cv2.imwrite(towrite+i, result)
 
-    for i in onlyfiles9:
-        towrite = './cleaned_val_copy/NORMAL/'
-        img_name = filename9 + i
-        img = imageio.imread(img_name)
-        img_ = cv2.imread(img_name)
-        #plt.imshow(img_)
-        l=img.shape[0]
-        w=img.shape[1]
-        
-        img = img_.reshape(l,w,3)
-        print(img.shape)
-        result = dhe(img)
-        #plt.imshow(result)
-        #plt.show()
-        cv2.imwrite(towrite+i, result)
-    
-    # for i in onlyfiles10:
-    #     towrite = './cleaned_val_copy/PNEUMONIA/'
-    #     img_name = filename10 + i
+    # for i in onlyfiles9:
+    #     towrite = './cleaned_val_copy/NORMAL/'
+    #     img_name = filename9 + i
     #     img = imageio.imread(img_name)
     #     img_ = cv2.imread(img_name)
     #     #plt.imshow(img_)
@@ -293,6 +277,22 @@ def main():
     #     #plt.imshow(result)
     #     #plt.show()
     #     cv2.imwrite(towrite+i, result)
+    
+    for i in onlyfiles10:
+        towrite = './cleaned_val_copy/PNEUMONIA/'
+        img_name = filename10 + i
+        img = imageio.imread(img_name)
+        img_ = cv2.imread(img_name)
+        #plt.imshow(img_)
+        l=img.shape[0]
+        w=img.shape[1]
+        
+        img = img_.reshape(l,w,3)
+        print(img.shape)
+        result = dhe(img)
+        #plt.imshow(result)
+        #plt.show()
+        cv2.imwrite(towrite+i, result)
     
        
 
