@@ -149,6 +149,8 @@ def main():
             #plt.imshow(result)
             #plt.show()
             cv2.imwrite(towrite+i, result)
+            print(c)
+    print('cleaned train NORMAL finished')
     
     # for i in onlyfiles2:
     #     towrite = './cleaned_train/PNEUMONIA/'
