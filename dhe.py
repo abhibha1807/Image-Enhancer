@@ -131,24 +131,24 @@ def main():
     onlyfiles10 = [f for f in listdir(filename10) if isfile(join(filename10, f))]
 
     #print(onlyfiles)
-    c=0
-    for i in onlyfiles1:
-        c=c+1
-        if c > 120:
-            towrite = './cleaned_train/NORMAL/'
-            img_name = filename1 + i
-            img = imageio.imread(img_name)
-            img_ = cv2.imread(img_name)
-            #plt.imshow(img_)
-            l=img.shape[0]
-            w=img.shape[1]
+    # c=0
+    # for i in onlyfiles1:
+    #     c=c+1
+    #     if c > 120:
+    #         towrite = './cleaned_train/NORMAL/'
+    #         img_name = filename1 + i
+    #         img = imageio.imread(img_name)
+    #         img_ = cv2.imread(img_name)
+    #         #plt.imshow(img_)
+    #         l=img.shape[0]
+    #         w=img.shape[1]
             
-            img = img_.reshape(l,w,3)
-            print(img.shape)
-            result = dhe(img)
-            #plt.imshow(result)
-            #plt.show()
-            cv2.imwrite(towrite+i, result)
+    #         img = img_.reshape(l,w,3)
+    #         print(img.shape)
+    #         result = dhe(img)
+    #         #plt.imshow(result)
+    #         #plt.show()
+    #         cv2.imwrite(towrite+i, result)
     
     # for i in onlyfiles2:
     #     towrite = './cleaned_train/PNEUMONIA/'
@@ -279,21 +279,21 @@ def main():
     #     #plt.show()
     #     cv2.imwrite(towrite+i, result)
     
-    # for i in onlyfiles10:
-    #     towrite = './cleaned_val_copy/PNEUMONIA/'
-    #     img_name = filename10 + i
-    #     img = imageio.imread(img_name)
-    #     img_ = cv2.imread(img_name)
-    #     #plt.imshow(img_)
-    #     l=img.shape[0]
-    #     w=img.shape[1]
+    for i in onlyfiles10:
+        towrite = './cleaned_val_copy/PNEUMONIA/'
+        img_name = filename10 + i
+        img = imageio.imread(img_name)
+        img_ = cv2.imread(img_name)
+        #plt.imshow(img_)
+        l=img.shape[0]
+        w=img.shape[1]
         
-    #     img = img_.reshape(l,w,3)
-    #     print(img.shape)
-    #     result = dhe(img)
-    #     #plt.imshow(result)
-    #     #plt.show()
-    #     cv2.imwrite(towrite+i, result)
+        img = img_.reshape(l,w,3)
+        print(img.shape)
+        result = dhe(img)
+        #plt.imshow(result)
+        #plt.show()
+        cv2.imwrite(towrite+i, result)
     
        
 
