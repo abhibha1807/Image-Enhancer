@@ -14,7 +14,7 @@ spec:
       restartPolicy: Never
       containers:
       - name: research
-        image: gitlab-registry.nautilus.optiputer.net/vamsirk/research-containers
+        image: gitlab-registry.nrp-nautilus.io/prp/jupyter-stack/prp
         imagePullPolicy: Always
         workingDir: /abhibha-volume/Image-Enhancer/
         command: ["python","dhe.py"]
