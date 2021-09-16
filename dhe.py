@@ -290,28 +290,28 @@ def main():
     #         print(c)
     # print('cleaned test copy NORMAL finished')
     
-    # c=0
-    # print('started cleaning data test copy PNEUMONIA')
-    # for i in onlyfiles8:
-    #     c=c+1
-    #     if c>281:
-    #         towrite = './cleaned_test_copy/PNEUMONIA/'
-    #         img_name = filename8 + i
-    #         img = imageio.imread(img_name)
-    #         img_ = cv2.imread(img_name)
-    #         #plt.imshow(img_)
-    #         l=img.shape[0]
-    #         w=img.shape[1]
+    c=0
+    print('started cleaning data test copy PNEUMONIA')
+    for i in onlyfiles8:
+        c=c+1
+        if c>292:
+            towrite = './cleaned_test_copy/PNEUMONIA/'
+            img_name = filename8 + i
+            img = imageio.imread(img_name)
+            img_ = cv2.imread(img_name)
+            #plt.imshow(img_)
+            l=img.shape[0]
+            w=img.shape[1]
             
-    #         img = img_.reshape(l,w,3)
-    #         print(img.shape)
-    #         result = dhe(img)
-    #         #plt.imshow(result)
-    #         #plt.show()
-    #         cv2.imwrite(towrite+i, result)
-    #         print('written:', towrite+i)
-    #         print(c)
-    # print('cleaned test copy PNEUMONIA finished')
+            img = img_.reshape(l,w,3)
+            print(img.shape)
+            result = dhe(img)
+            #plt.imshow(result)
+            #plt.show()
+            cv2.imwrite(towrite+i, result)
+            print('written:', towrite+i)
+            print(c)
+    print('cleaned test copy PNEUMONIA finished')
     
     # c=0
     # for i in onlyfiles9:
@@ -374,25 +374,25 @@ def main():
     #     print(c)
     # print('cleaned val  NORMAL finished')
     
-    c=0
-    for i in onlyfiles12:
-        c=c+1
-        towrite = './cleaned_val/PNEUMONIA/'
-        img_name = filename12 + i
-        img = imageio.imread(img_name)
-        img_ = cv2.imread(img_name)
-        #plt.imshow(img_)
-        l=img.shape[0]
-        w=img.shape[1]
+    # c=0
+    # for i in onlyfiles12:
+    #     c=c+1
+    #     towrite = './cleaned_val/PNEUMONIA/'
+    #     img_name = filename12 + i
+    #     img = imageio.imread(img_name)
+    #     img_ = cv2.imread(img_name)
+    #     #plt.imshow(img_)
+    #     l=img.shape[0]
+    #     w=img.shape[1]
         
-        img = img_.reshape(l,w,3)
-        print(img.shape)
-        result = dhe(img)
-        #plt.imshow(result)
-        #plt.show()
-        cv2.imwrite(towrite+i, result)
-        print(c)
-    print('cleaned val  PNEUMONIA finished')
+    #     img = img_.reshape(l,w,3)
+    #     print(img.shape)
+    #     result = dhe(img)
+    #     #plt.imshow(result)
+    #     #plt.show()
+    #     cv2.imwrite(towrite+i, result)
+    #     print(c)
+    # print('cleaned val  PNEUMONIA finished')
        
 
 if __name__ == '__main__':
