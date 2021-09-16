@@ -267,36 +267,13 @@ def main():
     #     print(c)
     # print('cleaned train copy PNEUMONIA finished')
 
-    # c=0
-    # print('started cleaning data test copy NORMAL')
-    # for i in onlyfiles7:
-    #     c=c+1
-    #     if c>160:
-    #         towrite = './cleaned_test_copy/NORMAL/'
-    #         img_name = filename7 + i
-    #         img = imageio.imread(img_name)
-    #         img_ = cv2.imread(img_name)
-    #         #plt.imshow(img_)
-    #         l=img.shape[0]
-    #         w=img.shape[1]
-            
-    #         img = img_.reshape(l,w,3)
-    #         print(img.shape)
-    #         result = dhe(img)
-    #         #plt.imshow(result)
-    #         #plt.show()
-    #         cv2.imwrite(towrite+i, result)
-    #         print('written:', towrite+i)
-    #         print(c)
-    # print('cleaned test copy NORMAL finished')
-    
     c=0
-    print('started cleaning data test copy PNEUMONIA')
-    for i in onlyfiles8:
+    print('started cleaning data test copy NORMAL')
+    for i in onlyfiles7:
         c=c+1
-        if c>293:
-            towrite = './cleaned_test_copy/PNEUMONIA/'
-            img_name = filename8 + i
+        if c>161:
+            towrite = './cleaned_test_copy/NORMAL/'
+            img_name = filename7 + i
             img = imageio.imread(img_name)
             img_ = cv2.imread(img_name)
             #plt.imshow(img_)
@@ -311,7 +288,30 @@ def main():
             cv2.imwrite(towrite+i, result)
             print('written:', towrite+i)
             print(c)
-    print('cleaned test copy PNEUMONIA finished')
+    print('cleaned test copy NORMAL finished')
+    
+    # c=0
+    # print('started cleaning data test copy PNEUMONIA')
+    # for i in onlyfiles8:
+    #     c=c+1
+    #     if c>293:
+    #         towrite = './cleaned_test_copy/PNEUMONIA/'
+    #         img_name = filename8 + i
+    #         img = imageio.imread(img_name)
+    #         img_ = cv2.imread(img_name)
+    #         #plt.imshow(img_)
+    #         l=img.shape[0]
+    #         w=img.shape[1]
+            
+    #         img = img_.reshape(l,w,3)
+    #         print(img.shape)
+    #         result = dhe(img)
+    #         #plt.imshow(result)
+    #         #plt.show()
+    #         cv2.imwrite(towrite+i, result)
+    #         print('written:', towrite+i)
+    #         print(c)
+    # print('cleaned test copy PNEUMONIA finished')
     
     # c=0
     # for i in onlyfiles9:
