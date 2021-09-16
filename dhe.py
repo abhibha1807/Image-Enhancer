@@ -294,7 +294,7 @@ def main():
     print('started cleaning data test copy PNEUMONIA')
     for i in onlyfiles8:
         c=c+1
-        if c>292:
+        if c>293:
             towrite = './cleaned_test_copy/PNEUMONIA/'
             img_name = filename8 + i
             img = imageio.imread(img_name)
