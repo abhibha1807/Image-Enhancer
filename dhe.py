@@ -226,7 +226,7 @@ def main():
     print('started cleaning data train copy NORMAL')
     for i in onlyfiles5:
         c=c+1
-        if c>533:
+        if c>583:
             towrite = './cleaned_train_copy/NORMAL/'
             img_name = filename5 + i
             img = imageio.imread(img_name)
