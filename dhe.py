@@ -161,10 +161,10 @@ def main():
     # print('cleaned train NORMAL finished')
     
     c=0
-    print('started cleaning data train PNEUMONIA from 3400 to 3600')
+    print('started cleaning data train PNEUMONIA from 3000 to 3200')
     for i in onlyfiles2:
         c=c+1
-        if c > 3400 and c < 3600:
+        if c > 3000 and c < 3200:
             towrite = './cleaned_train/PNEUMONIA/'
             img_name = filename2 + i
             img = imageio.imread(img_name)
@@ -179,8 +179,8 @@ def main():
             #plt.imshow(result)
             #plt.show()
             cv2.imwrite(towrite+i, result)
-            print(c)
-    print('cleaned train PNEUMONIA finished from 3400 to 3600')
+            print('written:', towrite+i, c)
+    print('cleaned train PNEUMONIA finished from 3000 to 3200')
 
     # c=0
     # print('started cleaning data test NORMAL')
