@@ -137,36 +137,13 @@ def main():
     onlyfiles12 = [f for f in listdir(filename10) if isfile(join(filename12, f))]
 
     #print(onlyfiles)
-    # c=0
-    # print('started cleaning data train NORMAL')
-    # for i in onlyfiles1:
-    #     c=c+1
-    #     if c > 1000:
-    #         towrite = './cleaned_train/NORMAL/'
-    #         img_name = filename1 + i
-    #         img = imageio.imread(img_name)
-    #         img_ = cv2.imread(img_name)
-    #         #plt.imshow(img_)
-    #         l=img.shape[0]
-    #         w=img.shape[1]
-            
-    #         img = img_.reshape(l,w,3)
-    #         print(img.shape)
-    #         result = dhe(img)
-    #         #plt.imshow(result)
-    #         #plt.show()
-    #         cv2.imwrite(towrite+i, result)
-    #         print('written:', towrite+i)
-    #         print(c)
-    # print('cleaned train NORMAL finished')
-    
     c=0
-    print('started cleaning data train PNEUMONIA from 3254 to 3400 ')
-    for i in onlyfiles2:
+    print('started cleaning data train NORMAL friom 1200')
+    for i in onlyfiles1:
         c=c+1
-        if c > 3254 and c < 3400:
-            towrite = './cleaned_train/PNEUMONIA/'
-            img_name = filename2 + i
+        if c > 1200:
+            towrite = './cleaned_train/NORMAL/'
+            img_name = filename1 + i
             img = imageio.imread(img_name)
             img_ = cv2.imread(img_name)
             #plt.imshow(img_)
@@ -179,8 +156,31 @@ def main():
             #plt.imshow(result)
             #plt.show()
             cv2.imwrite(towrite+i, result)
-            print('written:', towrite+i, c)
-    print('cleaned train PNEUMONIA finished from 3254 to 3400')
+            print('written:', towrite+i)
+            print(c)
+    print('cleaned train NORMAL finished from 1200')
+    
+    # c=0
+    # print('started cleaning data train PNEUMONIA from 3254 to 3400 ')
+    # for i in onlyfiles2:
+    #     c=c+1
+    #     if c > 3254 and c < 3400:
+    #         towrite = './cleaned_train/PNEUMONIA/'
+    #         img_name = filename2 + i
+    #         img = imageio.imread(img_name)
+    #         img_ = cv2.imread(img_name)
+    #         #plt.imshow(img_)
+    #         l=img.shape[0]
+    #         w=img.shape[1]
+            
+    #         img = img_.reshape(l,w,3)
+    #         print(img.shape)
+    #         result = dhe(img)
+    #         #plt.imshow(result)
+    #         #plt.show()
+    #         cv2.imwrite(towrite+i, result)
+    #         print('written:', towrite+i, c)
+    # print('cleaned train PNEUMONIA finished from 3254 to 3400')
 
     # c=0
     # print('started cleaning data test NORMAL')
